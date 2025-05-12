@@ -1,0 +1,143 @@
+/* Overall Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f06, #4e4bcb); /* Gradient background */
+  color: #fff;
+  transition:  0.3s ease-in-out;
+}
+
+/* World Clock container */
+.world-clock {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 1000px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Light Mode and Dark Mode switch */
+.world-clock.light {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+.world-clock.dark {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Title */
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', sans-serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Toggle button */
+.theme-toggle {
+  padding: 10px 20px;
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-bottom: 30px;
+  outline: none;
+}
+
+.theme-toggle:hover {
+  background-color: #ff6347;
+}
+
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 99, 71, 0.8);
+}
+
+/* Clock list and individual clocks */
+.clock-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.clock-container {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.clock-container:hover {
+  transform: scale(1.05);
+}
+
+.city-name {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #ff6347;
+  margin-bottom: 10px;
+}
+
+.clock-face {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animating clock with time */
+.time-display {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 1px;
+  transition: all 0.5s ease-in-out;
+}
+
+.clock-face:hover .time-display {
+  transform: scale(1.1);
+}
+
+/* Dark mode adjustments */
+.world-clock.dark .clock-container {
+  background-color: rgba(45, 45, 45, 0.8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.world-clock.dark .time-display {
+  color: #ffec40;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Light mode adjustments */
+.world-clock.light .clock-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.world-clock.light .time-display {
+  color: #333;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
